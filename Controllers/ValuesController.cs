@@ -19,7 +19,7 @@ namespace API_IPKISS.Controllers
         [HttpPost("reset")]
         public ActionResult reset()
         {
-            return Ok();
+            return Ok("Ok");
         }
 
         [HttpGet("balance")]
