@@ -1,4 +1,4 @@
-﻿using API_IPKISS.DTO;
+﻿using API_IPKISS.Model;
 
 namespace API_IPKISS.Service.Interface
 {
