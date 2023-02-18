@@ -9,7 +9,8 @@ namespace API_IPKISS.Service
         {
             if (account_id == 1234)
             {
-                throw new Exception("0");
+                var retorno = 0;
+                throw new Exception(retorno.ToString());
             }
             else
             {

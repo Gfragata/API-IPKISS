@@ -1,6 +1,4 @@
-﻿using API_IPKISS.Model;
-
-namespace API_IPKISS.DTO
+﻿namespace API_IPKISS.Model
 {
     public class Event
     {
