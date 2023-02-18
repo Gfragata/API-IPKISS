@@ -1,10 +1,9 @@
-﻿using API_IPKISS.DTO;
+﻿using API_IPKISS.Model;
 using API_IPKISS.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_IPKISS.Controllers
 {
-    [Route("values")]
     [ApiController]
     public class ValueController : ControllerBase
     {
@@ -30,12 +29,11 @@ namespace API_IPKISS.Controllers
             {
                 var retorno = _balanceService.GetBalance(account_id);
                 if (!retorno) return NotFound();
-                return Ok();
+                return Ok(20);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                return NotFound(ex.Message);
+                return NotFound(0);
             }
 
 
@@ -50,10 +48,10 @@ namespace API_IPKISS.Controllers
                 if (string.IsNullOrEmpty(retorno.ToString())) return NotFound();
                 return new ObjectResult(retorno) { StatusCode = StatusCodes.Status201Created };
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                return NotFound(ex.Message);
+                return NotFound(0);
             }
         }
     }
